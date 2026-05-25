@@ -1,0 +1,63 @@
+project_name: w
+project_slug: w
+portal:
+  name: Еда.Быстро
+  tagline: Доставка еды на дом
+admin:
+  login: Admin26
+  password: Demo20
+brand:
+  primary: '#e11d48'
+  dark: '#9f1239'
+  accent: '#f97316'
+main:
+  label: Заказ
+  code: FoodOrder
+  table: food_orders
+  fields:
+    - column: address
+      go_name: Address
+      label: Адрес доставки
+      type: string
+      widget: text
+      options: []
+      required: true
+    - column: dish
+      go_name: Dish
+      label: Блюдо
+      type: enum
+      widget: select
+      options:
+        - value: pizza
+          label: Пицца
+        - value: sushi
+          label: Суши
+        - value: burger
+          label: Бургер
+      required: true
+    - column: delivery_time
+      go_name: DeliveryTime
+      label: Время доставки
+      type: date
+      widget: date
+      options: []
+      required: true
+    - column: total
+      go_name: Total
+      label: Сумма, ₽
+      type: int
+      widget: number
+      options: []
+      required: true
+  statuses:
+    - Новый
+    - Готовится
+    - Доставлен
+reviews: true
+pages:
+  login: true
+  register: true
+  create_form: true
+  cabinet: true
+  admin: true
+  slider: true
